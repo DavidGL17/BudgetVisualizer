@@ -6,3 +6,4 @@ tests/testing_data
 config.yml
 *.log
 *.xlsx
+*.csv
