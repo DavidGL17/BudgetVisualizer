@@ -19,6 +19,18 @@ class Type(enum.Enum):
 
 @dataclass
 class Statement(Persistent):
+    """
+    A statement made by te user
+
+    Attributes:
+        id {int} -- The id of the statement.
+        date {datetime} -- The date of the statement.
+        category {str} -- The category of the statement.
+        type {Type} -- The type of the statement (income or expense)
+        amount {float} -- The amount of the statement.
+        description {str} -- The description of the statement.
+    """
+
     id: int = field(init=False)
     date: datetime
     category: str

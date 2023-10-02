@@ -1,3 +1,7 @@
+"""
+This module contains all database related functions, such as inserting, deleting and getting statements.
+"""
+
 from ZODB import DB
 import os
 from persistent.dict import PersistentDict
