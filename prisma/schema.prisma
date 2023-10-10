@@ -13,7 +13,6 @@ datasource db {
 model Type {
   id        Int
   name      String
-  value     Int
   Statement Statement[]
 
   @@id([name])

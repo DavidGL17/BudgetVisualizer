@@ -1,5 +1,5 @@
+"use client";
 import { useState } from "react";
-import MonthPicker from "./MonthPicker";
 
 type Expense = {
   id: number;
@@ -13,35 +13,36 @@ const expenses: Expense[] = [
     id: 1,
     description: "Groceries",
     amount: 50.0,
-    date: new Date("2022-01-01"),
+    date: new Date("2023-10-01"),
   },
   {
     id: 2,
     description: "Gas",
     amount: 30.0,
-    date: new Date("2022-01-02"),
+    date: new Date("2023-10-02"),
   },
   {
     id: 3,
     description: "Dinner",
     amount: 25.0,
-    date: new Date("2022-01-03"),
+    date: new Date("2023-10-03"),
   },
   {
     id: 4,
     description: "Movie",
     amount: 15.0,
-    date: new Date("2022-01-03"),
+    date: new Date("2023-10-03"),
   },
   {
     id: 5,
     description: "Coffee",
     amount: 5.0,
-    date: new Date("2022-01-04"),
+    date: new Date("2023-10-04"),
   },
 ];
 
 function Home(): JSX.Element {
+  // by default selectedMonth is the current month
   const [selectedMonth, setSelectedMonth] = useState<Date>(new Date());
   const handleMonthChange = (date: Date) => {
     setSelectedMonth(date);
@@ -85,7 +86,6 @@ function Home(): JSX.Element {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <MonthPicker value={selectedMonth} onChange={handleMonthChange} />
       {expenseList}
     </main>
   );
